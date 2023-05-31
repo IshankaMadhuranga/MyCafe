@@ -1,0 +1,17 @@
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.csproj.AssemblyReference.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.AssemblyInfoInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.AssemblyInfo.cs
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.csproj.CoreCompileInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.DataAccess.deps.json
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.DataAccess.runtimeconfig.json
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.DataAccess.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.DataAccess.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.Models.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\bin\Debug\net6.0\MyCafe.Models.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.csproj.CopyComplete
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\refint\MyCafe.DataAccess.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\MyCafe.DataAccess.genruntimeconfig.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.DataAccess\obj\Debug\net6.0\ref\MyCafe.DataAccess.dll

@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "DMh4tjkyA73FC85ysnnO/4d/QP3OHhC4Busk+ck3jCsmEzftqGsI21NHf6qBqYpbeIZkdMfpH/eMrf5RG3tDPw==",
+  "success": true,
+  "projectFilePath": "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.API\\MyCafe.API.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\94719\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\swashbuckle.aspnetcore\\6.2.3\\swashbuckle.aspnetcore.6.2.3.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\swashbuckle.aspnetcore.swagger\\6.2.3\\swashbuckle.aspnetcore.swagger.6.2.3.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\swashbuckle.aspnetcore.swaggergen\\6.2.3\\swashbuckle.aspnetcore.swaggergen.6.2.3.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\swashbuckle.aspnetcore.swaggerui\\6.2.3\\swashbuckle.aspnetcore.swaggerui.6.2.3.nupkg.sha512"
+  ],
+  "logs": []
+}

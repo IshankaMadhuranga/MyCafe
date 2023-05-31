@@ -1,0 +1,12 @@
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\bin\Debug\net6.0\MyCafe.Models.deps.json
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\bin\Debug\net6.0\MyCafe.Models.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\bin\Debug\net6.0\MyCafe.Models.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.csproj.AssemblyReference.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.AssemblyInfoInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.AssemblyInfo.cs
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.csproj.CoreCompileInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\refint\MyCafe.Models.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\MyCafe.Models.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Models\obj\Debug\net6.0\ref\MyCafe.Models.dll
