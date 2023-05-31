@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.2.3" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\MyCafe.DataAccess\MyCafe.DataAccess.csproj" />
+    <ProjectReference Include="..\MyCafe.Services\MyCafe.Services.csproj" />
+  </ItemGroup>
+
 </Project>

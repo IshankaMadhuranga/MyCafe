@@ -1,11 +1,14 @@
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\bin\Debug\net6.0\MyCafe.Services.deps.json
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\bin\Debug\net6.0\MyCafe.Services.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\bin\Debug\net6.0\MyCafe.Services.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\bin\Debug\net6.0\MyCafe.Models.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\bin\Debug\net6.0\MyCafe.Models.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.csproj.AssemblyReference.cache
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.GeneratedMSBuildEditorConfig.editorconfig
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.AssemblyInfoInputs.cache
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.AssemblyInfo.cs
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.csproj.CoreCompileInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.csproj.CopyComplete
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\refint\MyCafe.Services.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.Services\obj\Debug\net6.0\MyCafe.Services.pdb

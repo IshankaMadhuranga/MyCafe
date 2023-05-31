@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 using MyCafe.Models;
 
 
@@ -13,10 +14,9 @@ namespace MyCafe.DataAccess
     {
         public DbSet<Employee> Employees { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        public MyCafeDbContext(DbContextOptions<MyCafeDbContext> options)
+            : base(options)
         {
-            var connectionString = "Server=ISHANKAM-LT\\SQLEXPRESS; Database=MyCafeDb; User Id=imsa; Password=sa; Encrypt=False;";
-            optionsBuilder.UseSqlServer(connectionString);
         }
     }
 }

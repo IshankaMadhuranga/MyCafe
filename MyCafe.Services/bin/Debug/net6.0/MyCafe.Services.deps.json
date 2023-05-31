@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "MyCafe.Services/1.0.0": {
+        "dependencies": {
+          "MyCafe.Models": "1.0.0"
+        },
         "runtime": {
           "MyCafe.Services.dll": {}
+        }
+      },
+      "MyCafe.Models/1.0.0": {
+        "runtime": {
+          "MyCafe.Models.dll": {}
         }
       }
     }
   },
   "libraries": {
     "MyCafe.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "MyCafe.Models/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
