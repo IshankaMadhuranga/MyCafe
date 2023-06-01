@@ -3,13 +3,16 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafe.API", "MyCafe.API\MyCafe.API.csproj", "{54D28F65-0EB3-4DB3-8618-4FA672F2FBE2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCafe.API", "MyCafe.API\MyCafe.API.csproj", "{54D28F65-0EB3-4DB3-8618-4FA672F2FBE2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafe.DataAccess", "MyCafe.DataAccess\MyCafe.DataAccess.csproj", "{5C7B65C1-A9F2-461F-AC38-D50893771A81}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCafe.DataAccess", "MyCafe.DataAccess\MyCafe.DataAccess.csproj", "{5C7B65C1-A9F2-461F-AC38-D50893771A81}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafe.Models", "MyCafe.Models\MyCafe.Models.csproj", "{6918A663-F8BB-4265-9236-A9E850D04E48}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCafe.Models", "MyCafe.Models\MyCafe.Models.csproj", "{6918A663-F8BB-4265-9236-A9E850D04E48}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCafe.Services", "MyCafe.Services\MyCafe.Services.csproj", "{E58896A5-2447-4832-910B-EDF7177994FC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCafe.Services", "MyCafe.Services\MyCafe.Services.csproj", "{E58896A5-2447-4832-910B-EDF7177994FC}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5C7B65C1-A9F2-461F-AC38-D50893771A81} = {5C7B65C1-A9F2-461F-AC38-D50893771A81}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

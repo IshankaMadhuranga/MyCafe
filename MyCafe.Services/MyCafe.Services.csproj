@@ -7,6 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\MyCafe.DataAccess\MyCafe.DataAccess.csproj" />
     <ProjectReference Include="..\MyCafe.Models\MyCafe.Models.csproj" />
   </ItemGroup>
 

@@ -1163,6 +1163,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "MyCafe.DataAccess": "1.0.0",
           "MyCafe.Models": "1.0.0"
         },
         "compile": {
@@ -3484,7 +3485,6 @@
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "MyCafe.DataAccess >= 1.0.0",
       "MyCafe.Services >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.2.3"
     ]
@@ -3517,9 +3517,6 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.DataAccess\\MyCafe.DataAccess.csproj": {
-              "projectPath": "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.DataAccess\\MyCafe.DataAccess.csproj"
-            },
             "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.Services\\MyCafe.Services.csproj": {
               "projectPath": "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.Services\\MyCafe.Services.csproj"
             }

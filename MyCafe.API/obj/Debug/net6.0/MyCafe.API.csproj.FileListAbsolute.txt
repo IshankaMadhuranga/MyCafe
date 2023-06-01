@@ -59,8 +59,8 @@ D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\runtimes\win\l
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.DataAccess.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Models.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Services.dll
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.DataAccess.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Services.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.DataAccess.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Models.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.csproj.AssemblyReference.cache
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.GeneratedMSBuildEditorConfig.editorconfig

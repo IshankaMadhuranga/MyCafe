@@ -8,7 +8,6 @@
     ".NETCoreApp,Version=v6.0": {
       "MyCafe.API/1.0.0": {
         "dependencies": {
-          "MyCafe.DataAccess": "1.0.0",
           "MyCafe.Services": "1.0.0",
           "Swashbuckle.AspNetCore": "6.2.3"
         },
@@ -676,6 +675,7 @@
       },
       "MyCafe.Services/1.0.0": {
         "dependencies": {
+          "MyCafe.DataAccess": "1.0.0",
           "MyCafe.Models": "1.0.0"
         },
         "runtime": {
