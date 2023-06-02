@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using MyCafe.DataAccess;
 
@@ -11,9 +12,11 @@ using MyCafe.DataAccess;
 namespace MyCafe.DataAccess.Migrations
 {
     [DbContext(typeof(MyCafeDbContext))]
-    partial class MyCafeDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230601171203_update_relationship")]
+    partial class update_relationship
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -119,7 +122,7 @@ namespace MyCafe.DataAccess.Migrations
                             Gender = 0,
                             Name = "Ishma Madu",
                             Phone = "0771234567",
-                            StartDate = new DateTime(2023, 6, 2, 11, 26, 45, 9, DateTimeKind.Local).AddTicks(9091)
+                            StartDate = new DateTime(2023, 6, 1, 22, 42, 3, 574, DateTimeKind.Local).AddTicks(5277)
                         },
                         new
                         {
@@ -128,7 +131,7 @@ namespace MyCafe.DataAccess.Migrations
                             Gender = 1,
                             Name = "Peshani Bandara",
                             Phone = "0711234567",
-                            StartDate = new DateTime(2023, 6, 2, 11, 26, 45, 9, DateTimeKind.Local).AddTicks(9101)
+                            StartDate = new DateTime(2023, 6, 1, 22, 42, 3, 574, DateTimeKind.Local).AddTicks(5288)
                         },
                         new
                         {
@@ -137,7 +140,7 @@ namespace MyCafe.DataAccess.Migrations
                             Gender = 0,
                             Name = "Chaminda Herath",
                             Phone = "0751234567",
-                            StartDate = new DateTime(2023, 6, 2, 11, 26, 45, 9, DateTimeKind.Local).AddTicks(9102)
+                            StartDate = new DateTime(2023, 6, 1, 22, 42, 3, 574, DateTimeKind.Local).AddTicks(5288)
                         },
                         new
                         {
@@ -146,7 +149,7 @@ namespace MyCafe.DataAccess.Migrations
                             Gender = 0,
                             Name = "Denesh Manjula",
                             Phone = "0761234567",
-                            StartDate = new DateTime(2023, 6, 2, 11, 26, 45, 9, DateTimeKind.Local).AddTicks(9103)
+                            StartDate = new DateTime(2023, 6, 1, 22, 42, 3, 574, DateTimeKind.Local).AddTicks(5289)
                         });
                 });
 

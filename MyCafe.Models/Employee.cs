@@ -4,6 +4,7 @@ namespace MyCafe.Models
 {
     public class Employee
     {
+        [Key]
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
@@ -17,5 +18,7 @@ namespace MyCafe.Models
         [Required]
         public EmployeeGender Gender { get; set; }
         public DateTime StartDate { get; set; }
+
+        public Cafe? Cafe { get; set; }
     }
 }

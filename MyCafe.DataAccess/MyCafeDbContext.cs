@@ -21,27 +21,29 @@ namespace MyCafe.DataAccess
         //}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = "Server=ISHANKAM-LT\\SQLEXPRESS; Database=MyCafeDb; User Id=imsa; Password=sa; Encrypt=False;";
+            var connectionString = "Server=ISHANKAM-LT\\SQLEXPRESS; Database=mycafe; User Id=imsa; Password=sa; Encrypt=False;";
             optionsBuilder.UseSqlServer(connectionString);
         }
+      
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Employee>().HasData(new Employee[] {
-                new Employee { Id = 1, Name = "Ishma Madu", Email="ishmaemail@gmail.com",Gender=EmployeeGender.Male,  Phone="0771234567", StartDate=DateTime.Now},
-                new Employee { Id = 2, Name = "Peshani Bandara", Email="ishmaemail@gmail.com",Gender=EmployeeGender.Female,  Phone="0711234567", StartDate=DateTime.Now},
-                new Employee { Id = 3, Name = "Chaminda Herath", Email = "ishmaemail@gmail.com",Gender=EmployeeGender.Male, Phone = "0751234567", StartDate = DateTime.Now},
-                new Employee { Id = 4, Name = "Denesh Manjula", Email = "ishmaemail@gmail.com",Gender=EmployeeGender.Male, Phone = "0761234567", StartDate = DateTime.Now}
-            });
 
-            modelBuilder.Entity<Cafe>().HasData(new Cafe[]
-            {
+            var seedEmployees = new Employee[] {
+                new Employee { Id = 1, Name = "Ishma Madu", Email="ishmaemail@gmail.com",Gender=EmployeeGender.Male,  Phone="0771234567", StartDate=DateTime.Now},
+                new Employee { Id = 2, Name = "Peshani Bandara", Email="ishmaemail@gmail.com",Gender=EmployeeGender.Female, Phone = "0711234567", StartDate=DateTime.Now},
+                new Employee { Id = 3, Name = "Chaminda Herath", Email = "ishmaemail@gmail.com",Gender=EmployeeGender.Male,    Phone = "0751234567", StartDate = DateTime.Now},
+                new Employee { Id = 4, Name = "Denesh Manjula", Email = "ishmaemail@gmail.com",Gender=EmployeeGender.Male, Phone = "0761234567", StartDate = DateTime.Now}
+            };
+            modelBuilder.Entity<Employee>().HasData(seedEmployees);
+
+            var seedCafe = new Cafe[]
+           {
                 new Cafe
                 {
                     Id = 1,
                     Name="Chinese Cafe",
                     Description="Chinees taste",
                     Location="Kollupitiya",
-                    EmplId=2,
                 },
                 new Cafe
                 {
@@ -49,7 +51,6 @@ namespace MyCafe.DataAccess
                     Name="Indian Cafe",
                     Description="Indian taste",
                     Location="Wellawatte",
-                    EmplId=1,
                 },
                 new Cafe
                 {
@@ -57,9 +58,12 @@ namespace MyCafe.DataAccess
                     Name="Sri Lankan Cafe",
                     Description="Local taste",
                     Location="Galle",
-                    EmplId=4,
                 },
-            });
+           };
+            
+
+            modelBuilder.Entity<Cafe>().HasData(seedCafe);
+
         }
     }
 }

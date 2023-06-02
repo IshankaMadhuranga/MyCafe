@@ -1,10 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using MyCafe.Services;
+using MyCafe.Services.Employees;
 
 namespace MyCafe.API.Controllers
 {
-    [Route("api/[controller]")]
+    [Route("api/employees")]
     [ApiController]
     public class EmployeesController : ControllerBase
     {
@@ -15,15 +15,15 @@ namespace MyCafe.API.Controllers
             _employeeService = repository;
         }
 
-        [HttpGet("{id?}")]
-        public IActionResult GetEmployees(int? id)
+        [HttpGet("{cafeId?}")]
+        public IActionResult GetEmployees(int? cafeId)
         {
             var employees = _employeeService.AllEmployees();
-            if (id == null)
+            if (cafeId == null)
             {
                 return Ok(employees);
             }
-            employees = employees.Where(t => t.Id == id).ToList();
+            employees = employees.Where(t => t.Cafe?.Id == cafeId).ToList();
             return Ok(employees);
         }
     }

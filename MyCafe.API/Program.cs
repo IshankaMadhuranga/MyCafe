@@ -1,7 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using MyCafe.DataAccess;
-using MyCafe.Services;
+using MyCafe.Services.Employees;
+using MyCafe.Services.Cafes;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +12,8 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<ICafeRepository, CafeSevice>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeService>();
 //builder.Services.AddDbContext<MyCafeDbContext>(options =>
 //        options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"))
