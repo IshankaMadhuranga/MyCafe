@@ -13,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 builder.Services.AddScoped<ICafeRepository, CafeSevice>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeService>();
 //builder.Services.AddDbContext<MyCafeDbContext>(options =>

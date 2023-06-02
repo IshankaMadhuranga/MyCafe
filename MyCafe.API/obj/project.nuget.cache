@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "dvGtZIZYUHrdQx7dCKV7iMlru4BQq8i32eZmCZcfZla41Sutbk1aOkJqoUtnCng3ShohN1ZYdHyh3/LIjzTt+Q==",
+  "dgSpecHash": "hd9DLl7e6aE6jYi2BGegIgWlbop3pQ8rXYj1L/cgWma+jfbka83RfyYqv8owNoLfc4rw0zkltNubOuF+9H2SSQ==",
   "success": true,
   "projectFilePath": "D:\\Prson\\proj\\ncs\\api-my-cafee\\MyCafe\\MyCafe.API\\MyCafe.API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\94719\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\azure.core\\1.24.0\\azure.core.1.24.0.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\azure.identity\\1.6.0\\azure.identity.1.6.0.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
-    "C:\\Users\\94719\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\94719\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\microsoft.data.sqlclient\\5.0.1\\microsoft.data.sqlclient.5.0.1.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\5.0.1\\microsoft.data.sqlclient.sni.runtime.5.0.1.nupkg.sha512",
     "C:\\Users\\94719\\.nuget\\packages\\microsoft.entityframeworkcore\\7.0.5\\microsoft.entityframeworkcore.7.0.5.nupkg.sha512",

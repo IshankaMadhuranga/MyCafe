@@ -14,7 +14,7 @@ namespace MyCafe.Services.Models
         public string Name { get; set; }
         public string Email { get; set; }
         public string Phone { get; set; }
-        public int? DaysWorked { get; set;}
-        public string? CafeName { get; set; }
+        public int DaysWorked { get; set;}
+        public string CafeName { get; set; }
     }
 }

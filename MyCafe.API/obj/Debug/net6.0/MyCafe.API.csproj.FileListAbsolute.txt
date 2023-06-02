@@ -5,6 +5,8 @@ D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.API.dep
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.API.runtimeconfig.json
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.API.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.API.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\AutoMapper.dll
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\Azure.Core.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\Azure.Identity.dll
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll

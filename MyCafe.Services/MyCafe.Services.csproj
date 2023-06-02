@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\MyCafe.DataAccess\MyCafe.DataAccess.csproj" />
     <ProjectReference Include="..\MyCafe.Models\MyCafe.Models.csproj" />
   </ItemGroup>

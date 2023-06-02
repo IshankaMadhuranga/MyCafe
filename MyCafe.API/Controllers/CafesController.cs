@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MyCafe.Services.Cafes;
 using MyCafe.Services.Models;
@@ -10,40 +11,30 @@ namespace MyCafe.API.Controllers
     public class CafesController : ControllerBase
     {
         private readonly ICafeRepository _cafeService;
+        private readonly IMapper _mapper;
 
-        public CafesController(ICafeRepository service)
+        public CafesController(ICafeRepository service, IMapper mapper)
         {
             _cafeService = service;
+            _mapper = mapper;
         }
 
         [HttpGet("{location?}")]
         public ActionResult<ICollection<CafeDto>> GetEmployees(string? location)
         {
             var cafes = _cafeService.AllCafes();
-            var cafesDto = new List<CafeDto>();
-            foreach (var cafe in cafes)
-            {
-                cafesDto.Add(new CafeDto
-                {
-                    Id = cafe.Id,
-                    Name = cafe.Name,
-                    Description = cafe.Description,
-                    Location = cafe.Location,
-                    TotalEmployees = cafe.Employees.Count,
+            var mappedCafes = _mapper.Map<ICollection<CafeDto>>(cafes);
 
-                });
-            }
-
-            if (location == null)
+            if (string.IsNullOrWhiteSpace(location))
             {
-                return Ok(cafesDto);
+                return Ok(mappedCafes);
             }
-            cafesDto = cafesDto.Where(t => t.Location == location).ToList();
-            if (cafesDto.Count == 0)
+            mappedCafes = mappedCafes.Where(t => t.Location == location).ToList();
+            if (mappedCafes.Count == 0)
             {
                 return NotFound();  //To do
             }
-            return Ok(cafesDto);
+            return Ok(mappedCafes);
         }
 
         //[HttpPost]
