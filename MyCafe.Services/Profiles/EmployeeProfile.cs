@@ -14,9 +14,10 @@ namespace MyCafe.Services.Profiles
     {
         public EmployeeProfile()
         {
-            CreateMap<Employee, EmployeeDto>().ForMember(dest => dest.Id, opt => opt.MapFrom(src => $"UI{src.Id}"))
+            CreateMap<Employee, EmployeeFrom>().ForMember(dest => dest.Id, opt => opt.MapFrom(src => $"UI{src.Id}"))
                 .ForMember(dest => dest.CafeName, opt => opt.MapFrom(src => (src.Cafe != null) ? src.Cafe.Name : ""))
                 .ForMember(dest => dest.DaysWorked, opt => opt.MapFrom(src => (DateTime.Now - src.StartDate).TotalDays));
+            CreateMap<EmployeeTo, Employee>().ForMember(dest=>dest.StartDate,opt=>opt.MapFrom(src=>DateTime.Now));
         }
     }
 }

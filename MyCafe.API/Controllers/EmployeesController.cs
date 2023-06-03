@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyCafe.Models;
 using MyCafe.Services.Employees;
 using MyCafe.Services.Models;
 
@@ -10,20 +11,35 @@ namespace MyCafe.API.Controllers
     [ApiController]
     public class EmployeesController : ControllerBase
     {
-        private readonly IEmployeeRepository _employeeService;
+        private readonly IEmployeeRepository _service;
         private readonly IMapper _mapper;
 
         public EmployeesController(IEmployeeRepository repository, IMapper mapper)
         {
-            _employeeService = repository;
+            _service = repository;
             _mapper = mapper;
         }
 
-        [HttpGet]
-        public ActionResult<ICollection<EmployeeDto>> GetEmployees([FromQuery] string? cafe)
+        [HttpGet("{id}", Name = "GetEmployee")]
+        public async Task<ActionResult<EmployeeFrom>> GetEmployee(int id)
         {
-            var employees = _employeeService.AllEmployees();
-            var mappedEmployees = _mapper.Map<ICollection<EmployeeDto>>(employees);
+            var employee =await _service.GetEmployee(id);
+
+            if (employee is null)
+            {
+                return NotFound();
+            }
+
+            var mappedEmployee = _mapper.Map<EmployeeFrom>(employee);
+
+            return Ok(mappedEmployee);
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<ICollection<EmployeeFrom>>> GetEmployees([FromQuery] string? cafe)
+        {
+            var employees =await _service.AllEmployees();
+            var mappedEmployees = _mapper.Map<ICollection<EmployeeFrom>>(employees);
 
             if (string.IsNullOrWhiteSpace(cafe))
             {
@@ -31,6 +47,17 @@ namespace MyCafe.API.Controllers
             }
             mappedEmployees = mappedEmployees.Where(t => t.CafeName == cafe).ToList();
             return Ok(mappedEmployees);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<EmployeeFrom>> CreateEmployee(EmployeeTo employee)
+        {
+            var employeeEntity = _mapper.Map<Employee>(employee);
+            var newEmployee = await _service.AddEmployee(employeeEntity);
+
+            var newEmployeeForReturn = _mapper.Map<EmployeeFrom>(newEmployee);
+
+            return CreatedAtRoute("GetEmployee", newEmployeeForReturn);
         }
     }
 }
