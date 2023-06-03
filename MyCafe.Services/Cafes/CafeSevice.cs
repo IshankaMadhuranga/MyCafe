@@ -10,11 +10,15 @@ namespace MyCafe.Services.Cafes
 {
     public class CafeSevice : ICafeRepository
     {
-        private readonly MyCafeDbContext _context = new MyCafeDbContext();
-        public Cafe AddCafe(Cafe cafe)
+        private readonly IMyCafeDbContext _context;
+        public CafeSevice(IMyCafeDbContext dbContext)
+        {
+            _context = dbContext;
+        }
+        public async Task<Cafe> AddCafe(Cafe cafe)
         {
             _context.Cafes.Add(cafe);
-            _context.SaveChanges();
+            await _context.SaveChangesAsync(new CancellationToken());
 
             return _context.Cafes.Find(cafe.Id);
         }
@@ -25,16 +29,16 @@ namespace MyCafe.Services.Cafes
         }
 
 
-        public void updateCafe(Cafe cafe)
+        public async void updateCafe(Cafe cafe)
         {
-            _context.SaveChanges();
+            await _context.SaveChangesAsync(new CancellationToken());
         }
 
 
-        public void DeleteCafe(Cafe cafe)
+        public async void DeleteCafe(Cafe cafe)
         {
-            _context.Remove(cafe);
-            _context.SaveChanges();
+            //_context.Remove(cafe);
+            await _context.SaveChangesAsync(new CancellationToken());
         }
     }
 }

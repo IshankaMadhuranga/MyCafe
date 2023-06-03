@@ -10,12 +10,16 @@ namespace MyCafe.Services.Employees
 {
     public class EmployeeService : IEmployeeRepository
     {
-        private readonly MyCafeDbContext _context = new MyCafeDbContext();
+        private readonly IMyCafeDbContext _context;
+        public EmployeeService(IMyCafeDbContext dbContext )
+        {
+            _context = dbContext;
+        }
 
-        public Employee AddEmployee(Employee employee)
+        public async Task<Employee> AddEmployee(Employee employee)
         {
             _context.Employees.Add(employee);
-            _context.SaveChanges();
+           await _context.SaveChangesAsync(new CancellationToken());
 
             return _context.Employees.Find(employee.Id);  //To do
         }
@@ -25,15 +29,15 @@ namespace MyCafe.Services.Employees
             return _context.Employees.OrderByDescending(employee => employee.StartDate).ToList(); //To do
         }
 
-        public void DeleteEmployee(Employee employee)
+        public async void DeleteEmployee(Employee employee)
         {
-            _context.Remove(employee);
-            _context.SaveChanges();
+            //_context.Remove(employee);
+           await _context.SaveChangesAsync(new CancellationToken());
         }
 
-        public void updateEmployee(Employee cafe)
+        public async void updateEmployee(Employee cafe)
         {
-            _context.SaveChanges();
+           await _context.SaveChangesAsync(new CancellationToken());
         }
     }
 }

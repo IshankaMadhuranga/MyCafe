@@ -9,7 +9,7 @@ namespace MyCafe.Services.Employees
 {
     public interface IEmployeeRepository
     {
-        public Employee AddEmployee(Employee cafe);
+        public Task<Employee> AddEmployee(Employee employee);
         public List<Employee> AllEmployees();
 
         public void updateEmployee(Employee cafe);

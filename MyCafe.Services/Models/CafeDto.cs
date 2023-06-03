@@ -13,6 +13,6 @@ namespace MyCafe.Services.Models
         public string Description { get; set; }
         public int TotalEmployees { get; set; }
         public string Location { get; set; }
-        public int Id { get; set; }
+        public string Id { get; set; }
     }
 }

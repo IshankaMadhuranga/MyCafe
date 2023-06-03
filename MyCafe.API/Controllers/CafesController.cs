@@ -19,8 +19,8 @@ namespace MyCafe.API.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{location?}")]
-        public ActionResult<ICollection<CafeDto>> GetEmployees(string? location)
+        [HttpGet]
+        public ActionResult<ICollection<CafeDto>> GetCafes([FromQuery] string? location)
         {
             var cafes = _cafeService.AllCafes();
             var mappedCafes = _mapper.Map<ICollection<CafeDto>>(cafes);

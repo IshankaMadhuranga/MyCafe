@@ -10,6 +10,7 @@ namespace MyCafe.Models
     public class Cafe
     {
         [Key]
+        [Required]
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
@@ -21,6 +22,6 @@ namespace MyCafe.Models
         [Required]
         [MaxLength(50)]
         public string Location { get; set; }
-        public ICollection<Employee> Employees { get; set; } = new List<Employee>();
+        public virtual ICollection<Employee> Employees { get; set; } = new List<Employee>();
     }
 }

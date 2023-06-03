@@ -9,7 +9,7 @@ namespace MyCafe.Services.Cafes
 {
     public interface ICafeRepository
     {
-        public Cafe AddCafe(Cafe cafe);
+        public Task<Cafe> AddCafe(Cafe cafe);
         public List<Cafe> AllCafes();
 
         public void updateCafe(Cafe cafe);

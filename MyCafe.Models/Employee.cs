@@ -5,6 +5,7 @@ namespace MyCafe.Models
     public class Employee
     {
         [Key]
+        [Required]
         public int Id { get; set; }
         [Required]
         [MaxLength(50)]
@@ -18,7 +19,7 @@ namespace MyCafe.Models
         [Required]
         public EmployeeGender Gender { get; set; }
         public DateTime StartDate { get; set; }
-
-        public Cafe? Cafe { get; set; }
+        public int CafeId { get; set; }
+        public virtual Cafe Cafe { get; set; }
     }
 }
