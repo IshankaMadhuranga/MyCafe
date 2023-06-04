@@ -28,12 +28,12 @@ namespace MyCafe.Services.Employees
 
         public async Task<IEnumerable<Employee>> AllEmployees()
         {
-            return await _context.Employees.OrderByDescending(employee => employee.StartDate).ToListAsync(); //To do
+            return await _context.Employees.OrderByDescending(employee => employee.StartDate).Include(e => e.Cafe).ToListAsync(); //To do
         }
 
         public async Task<Employee> GetEmployee(int id)
         {
-            return await _context.Employees.FindAsync(id);
+            return await _context.Employees.Include(e => e.Cafe).FirstOrDefaultAsync(e => e.Id == id);
         }
 
         public async Task DeleteEmployee(Employee employee)

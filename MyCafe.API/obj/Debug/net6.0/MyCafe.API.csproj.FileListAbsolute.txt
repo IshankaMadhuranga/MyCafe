@@ -1,9 +1,3 @@
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.csproj.AssemblyReference.cache
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.GeneratedMSBuildEditorConfig.editorconfig
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.AssemblyInfoInputs.cache
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.AssemblyInfo.cs
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.csproj.CoreCompileInputs.cache
-D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\appsettings.Development.json
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\appsettings.json
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.API.exe
@@ -70,6 +64,13 @@ D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Service
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Services.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.DataAccess.pdb
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\bin\Debug\net6.0\MyCafe.Models.pdb
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.csproj.AssemblyReference.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.GeneratedMSBuildEditorConfig.editorconfig
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.AssemblyInfoInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.AssemblyInfo.cs
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.csproj.CoreCompileInputs.cache
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.MvcApplicationPartsAssemblyInfo.cs
+D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\MyCafe.API.MvcApplicationPartsAssemblyInfo.cache
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\staticwebassets\msbuild.MyCafe.API.Microsoft.AspNetCore.StaticWebAssets.props
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\staticwebassets\msbuild.build.MyCafe.API.props
 D:\Prson\proj\ncs\api-my-cafee\MyCafe\MyCafe.API\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.MyCafe.API.props
