@@ -1,4 +1,5 @@
-﻿using MyCafe.DataAccess;
+﻿using Microsoft.EntityFrameworkCore;
+using MyCafe.DataAccess;
 using MyCafe.Models;
 using System;
 using System.Collections.Generic;
@@ -17,28 +18,32 @@ namespace MyCafe.Services.Cafes
         }
         public async Task<Cafe> AddCafe(Cafe cafe)
         {
-            _context.Cafes.Add(cafe);
-            await _context.SaveChangesAsync(new CancellationToken());
+            await _context.Cafes.AddAsync(cafe);
+            await _context.SaveChangesAsync();
 
-            return _context.Cafes.Find(cafe.Id);
+            return await GetCafe(cafe.Id);
         }
 
-        public List<Cafe> AllCafes()
+        public async Task<IEnumerable<Cafe>> AllCafes()
         {
-            return _context.Cafes.ToList();
+            return await _context.Cafes.Include(cafe => cafe.Employees).OrderByDescending(cafe => cafe.Employees.Count).ToListAsync();
+        }
+
+        public async Task<Cafe> GetCafe(int id)
+        {
+            return await _context.Cafes.Include(cafe => cafe.Employees).FirstOrDefaultAsync(cafe => cafe.Id == id);
+        }
+
+        public async Task updateCafe(Cafe cafe)
+        {
+            await _context.SaveChangesAsync();
         }
 
 
-        public async void updateCafe(Cafe cafe)
+        public async Task DeleteCafe(Cafe cafe)
         {
-            await _context.SaveChangesAsync(new CancellationToken());
-        }
-
-
-        public async void DeleteCafe(Cafe cafe)
-        {
-            //_context.Remove(cafe);
-            await _context.SaveChangesAsync(new CancellationToken());
+            _context.Cafes.Remove(cafe);
+            await _context.SaveChangesAsync();
         }
     }
 }

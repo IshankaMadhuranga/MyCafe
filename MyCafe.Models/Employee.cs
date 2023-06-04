@@ -14,7 +14,7 @@ namespace MyCafe.Models
         [MaxLength(30)]
         public string Email { get; set; }
         [Required]
-        [MaxLength(11)]
+        [MaxLength(8)]
         public string Phone { get; set; }
         [Required]
         public EmployeeGender Gender { get; set; }

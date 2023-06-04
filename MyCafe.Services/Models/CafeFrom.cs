@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace MyCafe.Services.Models
 {
-    public class CafeDto
+    public class CafeFrom
     {
         public string Name { get; set; }
         public string Description { get; set; }

@@ -13,7 +13,7 @@ namespace MyCafe.Services.Profiles
     {
         public CafeProfile()
         {
-            CreateMap<Cafe, CafeDto>().ForMember(dest => dest.TotalEmployees, opt => opt.MapFrom(src => src.Employees.Count))
+            CreateMap<Cafe, CafeFrom>().ForMember(dest => dest.TotalEmployees, opt => opt.MapFrom(src => src.Employees.Count))
                 .ForMember(dest=>dest.Id,opt=>opt.MapFrom(src=>$"UI{src.Id}"));
         }
     }

@@ -10,9 +10,10 @@ namespace MyCafe.Services.Cafes
     public interface ICafeRepository
     {
         public Task<Cafe> AddCafe(Cafe cafe);
-        public List<Cafe> AllCafes();
+        public Task<IEnumerable<Cafe>> AllCafes();
 
-        public void updateCafe(Cafe cafe);
-        public void DeleteCafe(Cafe cafe);
+        public Task<Cafe> GetCafe(int id);
+        public Task updateCafe(Cafe cafe);
+        public Task DeleteCafe(Cafe cafe);
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MyCafe.Services.Models
 {
-    public class CreateCafeDto
+    public class CafeTo
     {
     }
 }

@@ -20,10 +20,10 @@ namespace MyCafe.API.Controllers
         }
 
         [HttpGet]
-        public ActionResult<ICollection<CafeDto>> GetCafes([FromQuery] string? location)
+        public async Task<ActionResult<ICollection<CafeFrom>>> GetCafes([FromQuery] string? location)
         {
-            var cafes = _cafeService.AllCafes();
-            var mappedCafes = _mapper.Map<ICollection<CafeDto>>(cafes);
+            var cafes = await _cafeService.AllCafes();
+            var mappedCafes = _mapper.Map<ICollection<CafeFrom>>(cafes);
 
             if (string.IsNullOrWhiteSpace(location))
             {
