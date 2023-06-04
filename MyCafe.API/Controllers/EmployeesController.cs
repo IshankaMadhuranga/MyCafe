@@ -54,12 +54,12 @@ namespace MyCafe.API.Controllers
         public async Task<ActionResult<EmployeeFrom>> CreateEmployee(EmployeeTo employee)
         {
             var employeeEntity = _mapper.Map<Employee>(employee);
-            employeeEntity.StartDate = DateTime.Now;
+           
             var newEmployee = await _service.AddEmployee(employeeEntity);
 
             var newEmployeeForReturn = _mapper.Map<EmployeeFrom>(newEmployee);
 
-            return CreatedAtRoute("GetEmployee", newEmployeeForReturn);
+            return CreatedAtRoute("GetEmployee", new { id = newEmployeeForReturn.Id }, newEmployeeForReturn);
         }
 
         [HttpPut("${id}")]

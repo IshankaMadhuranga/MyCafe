@@ -15,6 +15,7 @@ namespace MyCafe.Services.Profiles
         {
             CreateMap<Cafe, CafeFrom>().ForMember(dest => dest.TotalEmployees, opt => opt.MapFrom(src => src.Employees.Count))
                 .ForMember(dest=>dest.Id,opt=>opt.MapFrom(src=>$"UI{src.Id}"));
+            CreateMap<CafeTo, Cafe>();
         }
     }
 }

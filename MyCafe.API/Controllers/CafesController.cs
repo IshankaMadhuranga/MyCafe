@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using MyCafe.Models;
 using MyCafe.Services.Cafes;
 using MyCafe.Services.Models;
 
@@ -10,19 +11,34 @@ namespace MyCafe.API.Controllers
     [ApiController]
     public class CafesController : ControllerBase
     {
-        private readonly ICafeRepository _cafeService;
+        private readonly ICafeRepository _service;
         private readonly IMapper _mapper;
 
         public CafesController(ICafeRepository service, IMapper mapper)
         {
-            _cafeService = service;
+            _service = service;
             _mapper = mapper;
+        }
+
+        [HttpGet("{id}", Name = "GetCafe")]
+        public async Task<ActionResult<CafeFrom>> GetCafe(int id)
+        {
+            var cafe = await _service.GetCafe(id);
+
+            if (cafe is null)
+            {
+                return NotFound();
+            }
+
+            var mappedCafe = _mapper.Map<CafeFrom>(cafe);
+
+            return Ok(mappedCafe);
         }
 
         [HttpGet]
         public async Task<ActionResult<ICollection<CafeFrom>>> GetCafes([FromQuery] string? location)
         {
-            var cafes = await _cafeService.AllCafes();
+            var cafes = await _service.AllCafes();
             var mappedCafes = _mapper.Map<ICollection<CafeFrom>>(cafes);
 
             if (string.IsNullOrWhiteSpace(location))
@@ -37,22 +53,44 @@ namespace MyCafe.API.Controllers
             return Ok(mappedCafes);
         }
 
-        //[HttpPost]
-        //public ActionResult<CafeDto> CreateAuthor(CreateCafeDto cafe)
-        //{
-        //    var cafeEntity = _mapper.Map<Author>(cafe);
-        //    var newCafe = _service.AddCafe(cafeEntity);
+        [HttpPost]
+        public async Task<ActionResult<CafeFrom>> CreateCafe(CafeTo cafe)
+        {
+            var cafeEntity = _mapper.Map<Cafe>(cafe);
+            var newCafe = await _service.AddCafe(cafeEntity);
 
-        //    var cafeForReturn = _mapper.Map<CafeDto>(newCafe);
+            var newCafeForReturn = _mapper.Map<CafeFrom>(newCafe);
 
-        //    return CreatedAtRoute("GetAuthor", new { id = cafeForReturn.Id },
-        //        cafeForReturn);
-        //}
+            return CreatedAtRoute("GetCafe", new { id = newCafeForReturn.Id }, newCafeForReturn);
+        }
 
-        //[HttpDelete("{cafeId}")]
-        //public ActionResult DeleteCafe(int cafeId)
-        //{
+        [HttpPut("${id}")]
+        public async Task<ActionResult> UpdateCafe(int id, CafeTo cafe)
+        {
+            var updatingEntity = await _service.GetCafe(id);
 
-        //}
+            if (updatingEntity is null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(cafe, updatingEntity);
+            await _service.updateCafe(updatingEntity);
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> DeleteCafe(int id)
+        {
+            var deleteEntity = await _service.GetCafe(id);
+
+            if (deleteEntity is null)
+            {
+                return NotFound();
+            }
+            await _service.DeleteCafe(deleteEntity);
+            return NoContent();
+        }
+      
     }
 }
