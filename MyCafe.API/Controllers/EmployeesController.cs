@@ -1,6 +1,7 @@
 ﻿using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using MyCafe.Models;
 using MyCafe.Services.Employees;
 using MyCafe.Services.Models;
@@ -53,11 +54,40 @@ namespace MyCafe.API.Controllers
         public async Task<ActionResult<EmployeeFrom>> CreateEmployee(EmployeeTo employee)
         {
             var employeeEntity = _mapper.Map<Employee>(employee);
+            employeeEntity.StartDate = DateTime.Now;
             var newEmployee = await _service.AddEmployee(employeeEntity);
 
             var newEmployeeForReturn = _mapper.Map<EmployeeFrom>(newEmployee);
 
             return CreatedAtRoute("GetEmployee", newEmployeeForReturn);
+        }
+
+        [HttpPut("${id}")]
+        public async Task<ActionResult> UpdateEmployee(int id,EmployeeTo employee)
+        {
+            var updatingEntity = await _service.GetEmployee(id);
+
+            if (updatingEntity is null)
+            {
+                return NotFound();
+            }
+            _mapper.Map(employee, updatingEntity);
+            await _service.UpdateEmployee(updatingEntity);
+
+            return NoContent();
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult> DeleteEmployee(int id)
+        {
+            var deleteEntity = await _service.GetEmployee(id);
+
+            if (deleteEntity is null)
+            {
+                return NotFound();
+            }
+            await _service.DeleteEmployee(deleteEntity);
+            return NoContent();
         }
     }
 }

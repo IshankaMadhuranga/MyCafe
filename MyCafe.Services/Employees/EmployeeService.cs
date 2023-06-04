@@ -20,17 +20,8 @@ namespace MyCafe.Services.Employees
 
         public async Task<Employee> AddEmployee(Employee employee)
         {
-            try
-            {
-                await _context.Employees.AddAsync(employee);
-                await _context.SaveChangesAsync();
-            }
-            catch (Exception ex)
-            {
-
-                throw;
-            }
-           
+            await _context.Employees.AddAsync(employee);
+            await _context.SaveChangesAsync();
 
             return await GetEmployee(employee.Id);
         }
@@ -45,13 +36,13 @@ namespace MyCafe.Services.Employees
             return await _context.Employees.FindAsync(id);
         }
 
-        public async void DeleteEmployee(Employee employee)
+        public async Task DeleteEmployee(Employee employee)
         {
             _context.Employees.Remove(employee);
             await _context.SaveChangesAsync();
         }
 
-        public async void UpdateEmployee(Employee cafe)
+        public async Task UpdateEmployee(Employee employee)
         {
             await _context.SaveChangesAsync();
         }

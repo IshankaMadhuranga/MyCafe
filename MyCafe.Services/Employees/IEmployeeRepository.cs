@@ -13,8 +13,8 @@ namespace MyCafe.Services.Employees
         public Task<Employee> AddEmployee(Employee employee);
         public Task<IEnumerable<Employee>> AllEmployees();
         public Task<Employee> GetEmployee(int id);
-        public void UpdateEmployee(Employee cafe);
-        public void DeleteEmployee(Employee cafe);
+        public Task UpdateEmployee(Employee employee);
+        public Task DeleteEmployee(Employee employee);
         
     }
 }
