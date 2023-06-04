@@ -79,7 +79,7 @@ namespace MyCafe.API.Controllers
             return NoContent();
         }
 
-        [HttpDelete]
+        [HttpDelete("${id}")]
         public async Task<ActionResult> DeleteCafe(int id)
         {
             var deleteEntity = await _service.GetCafe(id);

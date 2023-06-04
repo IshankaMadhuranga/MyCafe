@@ -24,7 +24,7 @@ namespace MyCafe.API.Controllers
         [HttpGet("{id}", Name = "GetEmployee")]
         public async Task<ActionResult<EmployeeFrom>> GetEmployee(int id)
         {
-            var employee =await _service.GetEmployee(id);
+            var employee = await _service.GetEmployee(id);
 
             if (employee is null)
             {
@@ -37,9 +37,24 @@ namespace MyCafe.API.Controllers
         }
 
         [HttpGet]
+        [Route("cafe/{id}")]
+        public async Task<ActionResult<ICollection<EmployeeFrom>>> GetCafeEmployees(int id)
+        {
+            var employees = await _service.GetCafeEmployees(id);
+
+
+            if (employees is null)
+            {
+                return NoContent();
+            }
+            var mappedEmployees = _mapper.Map<ICollection<EmployeeFrom>>(employees);
+            return Ok(mappedEmployees);
+        }
+
+        [HttpGet]
         public async Task<ActionResult<ICollection<EmployeeFrom>>> GetEmployees([FromQuery] string? cafe)
         {
-            var employees =await _service.AllEmployees();
+            var employees = await _service.AllEmployees();
             var mappedEmployees = _mapper.Map<ICollection<EmployeeFrom>>(employees);
 
             if (string.IsNullOrWhiteSpace(cafe))
@@ -54,7 +69,7 @@ namespace MyCafe.API.Controllers
         public async Task<ActionResult<EmployeeFrom>> CreateEmployee(EmployeeTo employee)
         {
             var employeeEntity = _mapper.Map<Employee>(employee);
-           
+
             var newEmployee = await _service.AddEmployee(employeeEntity);
 
             var newEmployeeForReturn = _mapper.Map<EmployeeFrom>(newEmployee);
@@ -63,7 +78,7 @@ namespace MyCafe.API.Controllers
         }
 
         [HttpPut("${id}")]
-        public async Task<ActionResult> UpdateEmployee(int id,EmployeeTo employee)
+        public async Task<ActionResult> UpdateEmployee(int id, EmployeeTo employee)
         {
             var updatingEntity = await _service.GetEmployee(id);
 

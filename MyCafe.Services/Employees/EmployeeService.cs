@@ -26,9 +26,15 @@ namespace MyCafe.Services.Employees
             return await GetEmployee(employee.Id);
         }
 
+        public async Task<IEnumerable<Employee>> GetCafeEmployees(int id)
+        {
+            var data = await _context.Employees.Where(emp => emp.CafeId == id).Include(e => e.Cafe).OrderBy(employee => employee.StartDate).ToListAsync(); //To do
+            return data;
+        }
+
         public async Task<IEnumerable<Employee>> AllEmployees()
         {
-            return await _context.Employees.OrderByDescending(employee => employee.StartDate).Include(e => e.Cafe).ToListAsync(); //To do
+            return await _context.Employees.OrderBy(employee => employee.StartDate).Include(e => e.Cafe).ToListAsync(); //To do
         }
 
         public async Task<Employee> GetEmployee(int id)

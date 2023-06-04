@@ -12,6 +12,7 @@ namespace MyCafe.Services.Employees
     {
         public Task<Employee> AddEmployee(Employee employee);
         public Task<IEnumerable<Employee>> AllEmployees();
+        public Task<IEnumerable<Employee>> GetCafeEmployees(int id);
         public Task<Employee> GetEmployee(int id);
         public Task UpdateEmployee(Employee employee);
         public Task DeleteEmployee(Employee employee);
