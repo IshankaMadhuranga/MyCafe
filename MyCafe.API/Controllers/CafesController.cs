@@ -64,7 +64,7 @@ namespace MyCafe.API.Controllers
             return CreatedAtRoute("GetCafe", new { id = newCafeForReturn.Id }, newCafeForReturn);
         }
 
-        [HttpPut("${id}")]
+        [HttpPut("{id}")]
         public async Task<ActionResult> UpdateCafe(int id, CafeTo cafe)
         {
             var updatingEntity = await _service.GetCafe(id);
@@ -79,7 +79,7 @@ namespace MyCafe.API.Controllers
             return NoContent();
         }
 
-        [HttpDelete("${id}")]
+        [HttpDelete("{id}")]
         public async Task<ActionResult> DeleteCafe(int id)
         {
             var deleteEntity = await _service.GetCafe(id);
