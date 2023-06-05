@@ -20,6 +20,7 @@ namespace MyCafe.Services.Employees
 
         public async Task<Employee> AddEmployee(Employee employee)
         {
+            employee.StartDate = DateTime.Now;
             await _context.Employees.AddAsync(employee);
             await _context.SaveChangesAsync();
 
